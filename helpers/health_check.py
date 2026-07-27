@@ -107,7 +107,7 @@ def check_nvenc_encoding():
         os.makedirs(os.path.dirname(test_output), exist_ok=True)
         result = subprocess.run([
             config.ffmpeg,
-            '-f', 'lavfi', '-i', 'testsrc=duration=1:size=128x72:rate=10',
+            '-f', 'lavfi', '-i', 'testsrc=duration=1:size=640x360:rate=10',
             '-c:v', 'h264_nvenc',
             '-cq:v', '25',
             '-preset', 'p4',

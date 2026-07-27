@@ -72,6 +72,7 @@ class PreviewVideoGenerator:
                     '-c:v', 'h264_nvenc',
                     '-cq:v', '18',
                     '-preset', 'p4',
+                    '-pix_fmt', 'yuv420p',
                 ] + audio_args + ['-y', '-loglevel', 'quiet', clip_file]
             else:
                 command = [self.ffmpeg,
